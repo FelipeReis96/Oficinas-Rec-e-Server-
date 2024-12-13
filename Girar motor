@@ -1,0 +1,5 @@
+const Gpio = require('onoff').Gpio;
+const motor = new Gpio(17, 'out'); // Substitua 17 pelo número do GPIO
+
+motor.writeSync(1); // Liga o motor
+setTimeout(() => motor.writeSync(0), 2000); // Desliga o motor após 2 segundos
